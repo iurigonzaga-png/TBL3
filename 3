@@ -1,0 +1,16 @@
+using System;
+using Bogus;
+
+class Program
+{
+    static void Main()
+    {
+        var faker = new Faker("pt_BR");
+        string nome = faker.Name.FullName()
+        string email = faker.Internet.Email();
+        string endereco = faker.Address.FullAddress();
+        Console.WriteLine("Nome: " + nome);
+        Console.WriteLine("Email: " + email);
+        Console.WriteLine("Endereço: " + endereco);
+    }
+}
